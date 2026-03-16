@@ -1,42 +1,39 @@
 package com.example.cinesio.ui.screens
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
 import com.example.cinesio.data.model.Movie
+import com.example.cinesio.ui.components.movieCard
 import com.example.cinesio.viewmodel.MovieViewModel
 
 @Composable
-fun MovieScreen(vm: MovieViewModel) {
-
+fun MovieScreen(vm: MovieViewModel, navController: NavController) {
     val state by vm.state.collectAsState()
 
     Column {
-
-        Button(onClick = { vm.loadMovies() }) {
-            Text("Charger les films au cinéma")
-        }
-
         when {
-
-            state.loading ->
-                CircularProgressIndicator()
-
-            state.error != null ->
-                Text("Erreur : ${state.error}")
-
-            else ->
-
-                LazyColumn {
-
-                    items(state.movies) { movie ->
-
-                        MovieItem(movie)
-                    }
+            state.loading -> CircularProgressIndicator()
+            state.error != null -> Text("Erreur : ${state.error}")
+            else -> LazyColumn {
+                items(state.movies) { movie ->
+                    movieCard(
+                        movie,
+                        repoGenre = state.genreMap,
+                        upcoming = false,
+                        onItemClick = { navController.navigate("detail/${movie.id}") }
+                    )
                 }
+            }
         }
     }
 }

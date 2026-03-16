@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="Theme.Cinesio" parent="android:Theme.Material.Light.NoActionBar" ></style>
 
-    <style name="Theme.Cinesio" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.Cinesio.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/clap_red</item>
+        <item name="postSplashScreenTheme">@style/Theme.Cinesio</item>
+    </style>
 </resources>
