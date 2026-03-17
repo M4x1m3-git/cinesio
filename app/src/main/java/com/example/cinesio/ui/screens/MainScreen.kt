@@ -20,6 +20,8 @@ import com.example.cinesio.network.NetworkModule
 import com.example.cinesio.viewmodel.MovieDetailViewModel
 import com.example.cinesio.viewmodel.MovieViewModel
 import android.content.Context
+import androidx.compose.ui.platform.LocalContext
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.cinesio.data.local.database.AppDatabase
 import com.example.cinesio.data.repository.CommentaireRepository
 import com.example.cinesio.data.repository.FriendRepository
@@ -64,7 +66,7 @@ fun MainScreen(darkTheme: Boolean, onThemeUpdated: () -> Unit, context: Context)
     val movieViewModel = remember { MovieViewModel(movieRepository, genreRepository) }
     val movieDetailViewModel = remember { MovieDetailViewModel(movieRepository, videoRepository) }
 
-    val userViewModel = remember { UserViewModel(userRepository) }
+    val userViewModel: UserViewModel = viewModel(viewModelStoreOwner = LocalContext.current as androidx.activity.ComponentActivity)
     val friendViewModel = remember { FriendViewModel(friendRepository) }
     val commentaireViewModel = remember { CommentaireViewModel(commentaireRepository) }
     val userFilmViewModel = remember { UserFilmViewModel(userFilmRepository) }

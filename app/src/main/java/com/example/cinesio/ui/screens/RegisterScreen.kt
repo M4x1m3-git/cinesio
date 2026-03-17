@@ -1,11 +1,18 @@
 package com.example.cinesio.ui.screens
 
+import android.content.Context
+import android.content.SharedPreferences
+import android.text.TextUtils
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.MailOutline
+import androidx.compose.material.icons.filled.PersonOutline
 import androidx.compose.material.icons.outlined.Movie
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -16,6 +23,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.cinesio.data.local.database.AppDatabase
 import com.example.cinesio.data.local.entity.UserEntity
@@ -26,11 +34,19 @@ import com.example.cinesio.viewmodel.UserViewModel
 
 @Composable
 fun RegisterScreen(navController: NavController) {
+
+    var PREFS_KEY = "prefs"
+    var EMAIL_KEY = "email"
+    var USERNAME_KEY = "username"
+
     val context = LocalContext.current
+    val sharedPreferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
+
     val db = AppDatabase.getDatabase(context)
     val repository = UserRepository(db.userDao())
-    val viewModel = remember { UserViewModel(repository) }
-    val currentUser by viewModel.currentUser.collectAsState()
+
+    val userViewModel: UserViewModel = viewModel()
+    val currentUser by userViewModel.currentUser.collectAsState()
 
     var email by remember { mutableStateOf("") }
     var username by remember { mutableStateOf("") }
@@ -39,7 +55,10 @@ fun RegisterScreen(navController: NavController) {
 
     LaunchedEffect(currentUser) {
         if (currentUser != null) {
-            navController.navigate("profile")
+            navController.navigate("profile") {
+                // On vide la pile pour éviter de revenir sur Register avec le bouton retour
+                popUpTo("register") { inclusive = true }
+            }
         }
     }
 
@@ -47,7 +66,8 @@ fun RegisterScreen(navController: NavController) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(24.dp),
+                .padding(24.dp)
+                .verticalScroll(rememberScrollState()),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
@@ -129,13 +149,17 @@ fun RegisterScreen(navController: NavController) {
             OutlinedTextField(
                 value = username,
                 onValueChange = { username = it },
+                leadingIcon = { Icon(Icons.Default.PersonOutline, contentDescription = "Nom d'utilisateur") },
                 placeholder = { Text("Entrez votre nom", fontFamily = Inter, color = Color.Gray) },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(56.dp),
                 shape = RoundedCornerShape(8.dp),
                 singleLine = true,
-                textStyle = LocalTextStyle.current.copy(fontFamily = Inter)
+                textStyle = LocalTextStyle.current.copy(
+                    fontFamily = Inter,
+                    color = MaterialTheme.colorScheme.onSurface
+                ),
             )
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -166,11 +190,19 @@ fun RegisterScreen(navController: NavController) {
 
             Button(
                 onClick = {
-                    val user = UserEntity(email = email, username = username)
-                    viewModel.saveUser(user)
-                    println("Email: $email")
-                    println("Username: $username")
-                    println("Password: $password")
+                    if (email.isNotEmpty() && !emailError && username.isNotEmpty() && password.isNotEmpty()) {
+                        // On délègue la logique de sauvegarde au ViewModel
+                        val newUser = UserEntity(email = email, username = username)
+                        userViewModel.saveUser(newUser)
+
+                        // Note : SharedPreferences devrait idéalement être géré dans le ViewModel
+                        val sharedPreferences = context.getSharedPreferences("prefs", Context.MODE_PRIVATE)
+                        sharedPreferences.edit().apply {
+                            apply()
+                        }
+                    } else {
+                        Toast.makeText(context, "Champs invalides", Toast.LENGTH_SHORT).show()
+                    }
                 },
                 modifier = Modifier
                     .fillMaxWidth()

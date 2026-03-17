@@ -7,7 +7,7 @@ import com.example.cinesio.data.local.entity.UserEntity
 interface UserDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(user: UserEntity)
+    suspend fun insert(user: UserEntity): Long
 
     @Query("SELECT * FROM users WHERE id = :id")
     suspend fun getUserById(id: Int): UserEntity?

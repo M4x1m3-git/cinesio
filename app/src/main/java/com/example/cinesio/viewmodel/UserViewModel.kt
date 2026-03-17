@@ -1,16 +1,24 @@
 package com.example.cinesio.viewmodel
 
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import android.provider.Settings.Global.putString
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.cinesio.data.local.database.AppDatabase
 import com.example.cinesio.data.local.entity.UserEntity
 import com.example.cinesio.data.repository.UserRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-class UserViewModel(
+class UserViewModel(application: Application) : AndroidViewModel(application) {
+
     private val repository: UserRepository
-) : ViewModel() {
+
+    init {
+        val db = AppDatabase.getDatabase(application)
+        repository = UserRepository(db.userDao())
+    }
 
     private val _users = MutableStateFlow<List<UserEntity>>(emptyList())
     val users: StateFlow<List<UserEntity>> = _users
@@ -33,7 +41,14 @@ class UserViewModel(
     fun saveUser(user: UserEntity) {
         viewModelScope.launch {
             repository.saveUser(user)
-            loadUsers()
+
+            val sharedPref = getApplication<Application>().getSharedPreferences("prefs", android.content.Context.MODE_PRIVATE)
+            with(sharedPref.edit()) {
+                putString("email", user.email)
+                putString("username", user.username)
+                apply()
+            }
+            _currentUser.value = user
         }
     }
 
@@ -49,5 +64,9 @@ class UserViewModel(
             val user = repository.login(email, password)
             _currentUser.value = user
         }
+    }
+
+    fun logout() {
+        _currentUser.value = null
     }
 }

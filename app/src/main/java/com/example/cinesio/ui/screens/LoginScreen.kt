@@ -18,6 +18,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.media3.database.DatabaseProvider
 import androidx.navigation.NavController
 import com.example.cinesio.data.local.database.AppDatabase
@@ -31,8 +32,9 @@ fun LoginScreen(navController: NavController) {
     val context = LocalContext.current
     val db = AppDatabase.getDatabase(context)
     val repository = UserRepository(db.userDao())
-    val viewModel = remember { UserViewModel(repository) }
-    val currentUser by viewModel.currentUser.collectAsState()
+    val userViewModel: UserViewModel = viewModel(viewModelStoreOwner = LocalContext.current as androidx.activity.ComponentActivity)
+
+    val currentUser by userViewModel.currentUser.collectAsState()
 
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
@@ -160,7 +162,7 @@ fun LoginScreen(navController: NavController) {
             Spacer(modifier = Modifier.height(24.dp))
 
             Button(
-                onClick = { viewModel.login(email, password) },
+                onClick = { userViewModel.login(email, password) },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(56.dp),
