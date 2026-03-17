@@ -43,4 +43,11 @@ class UserViewModel(
             loadUsers()
         }
     }
+
+    fun login(email: String, password: String) {
+        viewModelScope.launch {
+            val user = repository.login(email, password)
+            _currentUser.value = user
+        }
+    }
 }

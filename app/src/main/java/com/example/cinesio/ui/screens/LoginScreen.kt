@@ -13,20 +13,36 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.media3.database.DatabaseProvider
 import androidx.navigation.NavController
+import com.example.cinesio.data.local.database.AppDatabase
+import com.example.cinesio.data.repository.UserRepository
 import com.example.cinesio.ui.theme.CinesioTheme
 import com.example.cinesio.ui.theme.Inter
+import com.example.cinesio.viewmodel.UserViewModel
 
 @Composable
 fun LoginScreen(navController: NavController) {
+    val context = LocalContext.current
+    val db = AppDatabase.getDatabase(context)
+    val repository = UserRepository(db.userDao())
+    val viewModel = remember { UserViewModel(repository) }
+    val currentUser by viewModel.currentUser.collectAsState()
 
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var emailError by remember { mutableStateOf(false) }
+
+    LaunchedEffect(currentUser) {
+        if (currentUser != null) {
+            navController.navigate("profile")
+        }
+    }
 
     CinesioTheme {
         Column(
@@ -37,7 +53,6 @@ fun LoginScreen(navController: NavController) {
             verticalArrangement = Arrangement.Center
         ) {
 
-            // Icône cinéma sur fond rouge
             Box(
                 modifier = Modifier
                     .size(80.dp)
@@ -54,7 +69,6 @@ fun LoginScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            // Titre principal
             Text(
                 text = "BON RETOUR",
                 fontSize = 28.sp,
@@ -62,7 +76,6 @@ fun LoginScreen(navController: NavController) {
                 fontFamily = Inter
             )
 
-            // Sous-titre
             Text(
                 text = "Connectez-vous pour continuer",
                 fontSize = 16.sp,
@@ -71,7 +84,6 @@ fun LoginScreen(navController: NavController) {
                 modifier = Modifier.padding(bottom = 32.dp)
             )
 
-            // Email
             Text(
                 text = "Adresse email",
                 fontSize = 14.sp,
@@ -108,7 +120,6 @@ fun LoginScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Mot de passe
             Text(
                 text = "Mot de passe",
                 fontSize = 14.sp,
@@ -149,7 +160,7 @@ fun LoginScreen(navController: NavController) {
             Spacer(modifier = Modifier.height(24.dp))
 
             Button(
-                onClick = {  },
+                onClick = { viewModel.login(email, password) },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(56.dp),

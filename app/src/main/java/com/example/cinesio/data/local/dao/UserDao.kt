@@ -18,4 +18,6 @@ interface UserDao {
     @Delete
     suspend fun delete(user: UserEntity)
 
+    @Query("SELECT * FROM users WHERE email = :email LIMIT 1")
+    suspend fun login(email: String): UserEntity?
 }

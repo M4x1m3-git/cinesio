@@ -12,19 +12,36 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.example.cinesio.data.local.database.AppDatabase
+import com.example.cinesio.data.local.entity.UserEntity
+import com.example.cinesio.data.repository.UserRepository
 import com.example.cinesio.ui.theme.CinesioTheme
 import com.example.cinesio.ui.theme.Inter
+import com.example.cinesio.viewmodel.UserViewModel
 
 @Composable
 fun RegisterScreen(navController: NavController) {
+    val context = LocalContext.current
+    val db = AppDatabase.getDatabase(context)
+    val repository = UserRepository(db.userDao())
+    val viewModel = remember { UserViewModel(repository) }
+    val currentUser by viewModel.currentUser.collectAsState()
+
     var email by remember { mutableStateOf("") }
     var username by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var emailError by remember { mutableStateOf(false) }
+
+    LaunchedEffect(currentUser) {
+        if (currentUser != null) {
+            navController.navigate("profile")
+        }
+    }
 
     CinesioTheme {
         Column(
@@ -50,7 +67,6 @@ fun RegisterScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            // Titre principal
             Text(
                 text = "Créer un compte",
                 fontSize = 28.sp,
@@ -58,7 +74,6 @@ fun RegisterScreen(navController: NavController) {
                 style = MaterialTheme.typography.headlineMedium
             )
 
-            // Sous-titre
             Text(
                 text = "Remplissez vos informations pour commencer",
                 fontSize = 16.sp,
@@ -67,7 +82,6 @@ fun RegisterScreen(navController: NavController) {
                 modifier = Modifier.padding(bottom = 32.dp)
             )
 
-            // Email
             Text(
                 text = "Adresse email",
                 fontSize = 14.sp,
@@ -104,7 +118,6 @@ fun RegisterScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Nom d'utilisateur
             Text(
                 text = "Nom d'utilisateur",
                 fontSize = 14.sp,
@@ -127,7 +140,6 @@ fun RegisterScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Mot de passe
             Text(
                 text = "Mot de passe",
                 fontSize = 14.sp,
@@ -154,6 +166,8 @@ fun RegisterScreen(navController: NavController) {
 
             Button(
                 onClick = {
+                    val user = UserEntity(email = email, username = username)
+                    viewModel.saveUser(user)
                     println("Email: $email")
                     println("Username: $username")
                     println("Password: $password")

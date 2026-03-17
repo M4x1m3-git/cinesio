@@ -34,4 +34,11 @@ class UserRepository(
     suspend fun deleteUser(user: UserEntity) {
         dao.delete(user)
     }
+
+    /**
+     * Connexion de l'utilisateur
+     * */
+    suspend fun login(email: String, password: String): UserEntity? {
+        return dao.login(email)
+    }
 }
