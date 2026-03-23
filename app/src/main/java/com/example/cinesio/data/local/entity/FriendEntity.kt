@@ -7,6 +7,7 @@ import androidx.room.Index
 
 @Entity(
     tableName = "friends",
+    primaryKeys = ["userId", "friendId"],
     foreignKeys = [
         ForeignKey(
             entity = UserEntity::class,
@@ -21,10 +22,12 @@ import androidx.room.Index
             onDelete = ForeignKey.CASCADE
         )
     ],
-    indices = [Index(value = ["userId"]), Index(value = ["friendId"])]
+    indices = [
+        Index(value = ["userId"]),
+        Index(value = ["friendId"])
+    ]
 )
 data class FriendEntity(
-    @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val userId: Int,
     val friendId: Int,
     val status: String,

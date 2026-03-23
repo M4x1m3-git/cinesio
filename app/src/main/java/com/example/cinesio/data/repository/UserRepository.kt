@@ -10,8 +10,8 @@ class UserRepository(
     /**
      * Insère ou met à jour un utilisateur en local
      */
-    suspend fun saveUser(user: UserEntity) {
-        dao.insert(user)
+    suspend fun saveUser(user: UserEntity): Long {
+        return dao.insert(user)
     }
 
     /**
@@ -38,7 +38,14 @@ class UserRepository(
     /**
      * Connexion de l'utilisateur
      * */
-    suspend fun login(email: String, password: String): UserEntity? {
-        return dao.login(email)
+    suspend fun getUserByEmail(email: String): UserEntity? {
+        return dao.getUserByEmail(email)
+    }
+
+    /**
+     * Vérifier si l'email est déjà prise
+     */
+    suspend fun isEmailTaken(email: String): Boolean {
+        return dao.getUserByEmail(email) != null
     }
 }

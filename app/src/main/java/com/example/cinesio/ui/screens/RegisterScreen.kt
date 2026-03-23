@@ -1,8 +1,6 @@
 package com.example.cinesio.ui.screens
 
 import android.content.Context
-import android.content.SharedPreferences
-import android.text.TextUtils
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -14,7 +12,14 @@ import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.MailOutline
 import androidx.compose.material.icons.filled.PersonOutline
 import androidx.compose.material.icons.outlined.Movie
-import androidx.compose.material3.*
+import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
+import androidx.compose.material3.LocalTextStyle
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -32,6 +37,7 @@ import com.example.cinesio.ui.theme.CinesioTheme
 import com.example.cinesio.ui.theme.Inter
 import com.example.cinesio.viewmodel.UserViewModel
 
+@OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
 @Composable
 fun RegisterScreen(navController: NavController) {
 
@@ -52,6 +58,37 @@ fun RegisterScreen(navController: NavController) {
     var username by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var emailError by remember { mutableStateOf(false) }
+
+    val colors = OutlinedTextFieldDefaults.colors(
+        focusedTextColor = MaterialTheme.colorScheme.onBackground,
+        unfocusedTextColor = MaterialTheme.colorScheme.onBackground,
+        disabledTextColor = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.5f),
+        errorTextColor = MaterialTheme.colorScheme.error,
+
+        focusedContainerColor = MaterialTheme.colorScheme.surface,
+        unfocusedContainerColor = MaterialTheme.colorScheme.surface,
+        disabledContainerColor = MaterialTheme.colorScheme.surface,
+        errorContainerColor = MaterialTheme.colorScheme.surface,
+
+        cursorColor = MaterialTheme.colorScheme.primary,
+        errorCursorColor = MaterialTheme.colorScheme.error,
+
+        focusedBorderColor = MaterialTheme.colorScheme.primary,
+        unfocusedBorderColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
+        disabledBorderColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.3f),
+        errorBorderColor = MaterialTheme.colorScheme.error,
+
+        focusedLeadingIconColor = MaterialTheme.colorScheme.onSurface,
+        unfocusedLeadingIconColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
+        disabledLeadingIconColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.3f),
+        errorLeadingIconColor = MaterialTheme.colorScheme.error,
+
+        focusedPlaceholderColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
+        unfocusedPlaceholderColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
+        disabledPlaceholderColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.3f),
+        errorPlaceholderColor = MaterialTheme.colorScheme.error
+    )
+
 
     LaunchedEffect(currentUser) {
         if (currentUser != null) {
@@ -117,14 +154,23 @@ fun RegisterScreen(navController: NavController) {
                     emailError = !android.util.Patterns.EMAIL_ADDRESS.matcher(it).matches()
                 },
                 leadingIcon = { Icon(Icons.Default.MailOutline, contentDescription = "Email") },
-                placeholder = { Text("Entrez votre email", fontFamily = Inter, color = Color.Gray) },
+                placeholder = {
+                    Text(
+                        "Entrez votre email",
+                        fontFamily = Inter,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                },
                 isError = emailError,
+                textStyle = LocalTextStyle.current.copy(
+                    fontFamily = Inter,
+                ),
+                colors = colors,
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(56.dp),
                 shape = RoundedCornerShape(8.dp),
-                singleLine = true,
-                textStyle = LocalTextStyle.current.copy(fontFamily = Inter)
+                singleLine = true
             )
             if (emailError) {
                 Text(
@@ -150,16 +196,16 @@ fun RegisterScreen(navController: NavController) {
                 value = username,
                 onValueChange = { username = it },
                 leadingIcon = { Icon(Icons.Default.PersonOutline, contentDescription = "Nom d'utilisateur") },
-                placeholder = { Text("Entrez votre nom", fontFamily = Inter, color = Color.Gray) },
+                placeholder = { Text("Entrez votre nom", fontFamily = Inter, color = MaterialTheme.colorScheme.onSurfaceVariant) },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(56.dp),
                 shape = RoundedCornerShape(8.dp),
                 singleLine = true,
                 textStyle = LocalTextStyle.current.copy(
-                    fontFamily = Inter,
-                    color = MaterialTheme.colorScheme.onSurface
+                    fontFamily = Inter
                 ),
+                colors = colors,
             )
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -176,14 +222,15 @@ fun RegisterScreen(navController: NavController) {
                 value = password,
                 onValueChange = { password = it },
                 leadingIcon = { Icon(Icons.Default.Lock, contentDescription = "Password") },
-                placeholder = { Text("Entrez votre mot de passe", fontFamily = Inter, color = Color.Gray) },
+                placeholder = { Text("Entrez votre mot de passe", fontFamily = Inter, color = MaterialTheme.colorScheme.onSurfaceVariant) },
                 visualTransformation = PasswordVisualTransformation(),
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(56.dp),
                 shape = RoundedCornerShape(8.dp),
                 singleLine = true,
-                textStyle = LocalTextStyle.current.copy(fontFamily = Inter)
+                textStyle = LocalTextStyle.current.copy(fontFamily = Inter),
+                colors = colors,
             )
 
             Spacer(modifier = Modifier.height(24.dp))
@@ -191,14 +238,11 @@ fun RegisterScreen(navController: NavController) {
             Button(
                 onClick = {
                     if (email.isNotEmpty() && !emailError && username.isNotEmpty() && password.isNotEmpty()) {
-                        // On délègue la logique de sauvegarde au ViewModel
-                        val newUser = UserEntity(email = email, username = username)
-                        userViewModel.saveUser(newUser)
-
-                        // Note : SharedPreferences devrait idéalement être géré dans le ViewModel
-                        val sharedPreferences = context.getSharedPreferences("prefs", Context.MODE_PRIVATE)
-                        sharedPreferences.edit().apply {
-                            apply()
+                        val newUser = UserEntity(email = email, password = password, username = username)
+                        userViewModel.register(newUser) { success ->
+                            if (!success) {
+                                Toast.makeText(context, "Email déjà utilisé", Toast.LENGTH_SHORT).show()
+                            }
                         }
                     } else {
                         Toast.makeText(context, "Champs invalides", Toast.LENGTH_SHORT).show()

@@ -20,6 +20,7 @@ import com.example.cinesio.network.NetworkModule
 import com.example.cinesio.viewmodel.MovieDetailViewModel
 import com.example.cinesio.viewmodel.MovieViewModel
 import android.content.Context
+import androidx.compose.material.icons.rounded.Bookmark
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.cinesio.data.local.database.AppDatabase
@@ -80,10 +81,12 @@ fun MainScreen(darkTheme: Boolean, onThemeUpdated: () -> Unit, context: Context)
             val activeColor = MaterialTheme.colorScheme.primary
             val inactiveColor = Color(0xFF9A9A9A)
             val borderColor = MaterialTheme.colorScheme.outline
+            val sharedPreferences = context.getSharedPreferences("prefs", Context.MODE_PRIVATE)
+            val savedEmail = sharedPreferences.getString("email", null)
 
             NavigationBar(
                 containerColor = MaterialTheme.colorScheme.surface,
-                modifier = Modifier.height(95.dp).drawBehind {
+                modifier = Modifier.height(100.dp).drawBehind {
                     val width = 3.dp.toPx()
                     drawLine(
                         color = borderColor,
@@ -113,6 +116,9 @@ fun MainScreen(darkTheme: Boolean, onThemeUpdated: () -> Unit, context: Context)
 
                 navItem({ Icon(Icons.Rounded.Home, contentDescription = "Principal", modifier = Modifier.size(22.dp)) }, "Principal", "principal")
                 navItem({ Icon(Icons.Rounded.Theaters, contentDescription = "Films", modifier = Modifier.size(22.dp)) }, "Films", "movie")
+                if (savedEmail != null) {
+                    navItem({ Icon(Icons.Rounded.Bookmark, contentDescription = "Enregistré", modifier = Modifier.size(22.dp)) }, "Favoris", "favorites")
+                }
                 navItem({ Icon(Icons.Rounded.Person, contentDescription = "Profil", modifier = Modifier.size(22.dp)) }, "Profil", "profile")
             }
         }
@@ -126,16 +132,24 @@ fun MainScreen(darkTheme: Boolean, onThemeUpdated: () -> Unit, context: Context)
             composable("principal") {
                 PrincipalScreen(
                     navController = navController,
-                    vm = movieViewModel
+                    vm = movieViewModel,
+                    context= context,
+                    userFilmViewModel = userFilmViewModel
                 )
             }
-            composable("movie") { MovieScreen(vm = movieViewModel, navController = navController) }
+            composable("movie") { MovieScreen(vm = movieViewModel, navController = navController, context= context, userFilmViewModel = userFilmViewModel) }
             composable("profile") { ProfilScreen(navController, darkTheme = darkTheme, onThemeUpdated = onThemeUpdated) }
             composable("login") { LoginScreen(navController) }
             composable("register") { RegisterScreen(navController) }
+            composable("favorites") { FavoritesScreen(
+                navController,
+                context,
+                userFilmViewModel,
+                allMovies = movieViewModel.state.collectAsState().value.movies
+            ) }
             composable("detail/{id}") { backStackEntry ->
                 val id = backStackEntry.arguments?.getString("id")?.toIntOrNull() ?: 0
-                DetailScreen(vm = movieDetailViewModel, movieId = id)
+                DetailScreen(vm = movieDetailViewModel, movieId = id, context = context, userFilmViewModel=userFilmViewModel)
             }
         }
     }

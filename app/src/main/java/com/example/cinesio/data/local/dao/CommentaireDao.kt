@@ -23,4 +23,29 @@ interface CommentaireDao {
 
     @Query("DELETE FROM commentaires")
     suspend fun clear()
+
+    @Query("""
+        SELECT c.* FROM commentaires c
+        INNER JOIN user_films uf ON c.userFilmId = uf.id
+        WHERE uf.userId = :userId
+        ORDER BY c.createdAt DESC
+    """)
+    suspend fun getCommentairesByUser(userId: Int): List<CommentaireEntity>
+
+    @Query("""
+        SELECT COUNT(*) FROM commentaires c
+        INNER JOIN user_films uf ON c.userFilmId = uf.id
+        WHERE uf.userId = :userId
+    """)
+    suspend fun getReviewCount(userId: Int): Int
+
+    @Query("""
+    SELECT c.id, c.comment, c.createdAt, c.userFilmId, u.username
+    FROM commentaires c
+    INNER JOIN user_films uf ON c.userFilmId = uf.id
+    INNER JOIN users u ON uf.userId = u.id
+    WHERE uf.tmdbId = :tmdbId
+    ORDER BY c.createdAt DESC
+""")
+    suspend fun getCommentairesByFilm(tmdbId: Int): List<CommentaireEntity>
 }

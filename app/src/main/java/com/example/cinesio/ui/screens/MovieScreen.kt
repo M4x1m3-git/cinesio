@@ -1,5 +1,6 @@
 package com.example.cinesio.ui.screens
 
+import android.content.Context
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -15,9 +16,10 @@ import coil.compose.AsyncImage
 import com.example.cinesio.data.model.Movie
 import com.example.cinesio.ui.components.movieCard
 import com.example.cinesio.viewmodel.MovieViewModel
+import com.example.cinesio.viewmodel.UserFilmViewModel
 
 @Composable
-fun MovieScreen(vm: MovieViewModel, navController: NavController) {
+fun MovieScreen(vm: MovieViewModel, navController: NavController, context: Context, userFilmViewModel: UserFilmViewModel) {
     val state by vm.state.collectAsState()
 
     Column {
@@ -30,7 +32,9 @@ fun MovieScreen(vm: MovieViewModel, navController: NavController) {
                         movie,
                         repoGenre = state.genreMap,
                         upcoming = false,
-                        onItemClick = { navController.navigate("detail/${movie.id}") }
+                        onItemClick = { navController.navigate("detail/${movie.id}") },
+                        context= context,
+                        userFilmViewModel = userFilmViewModel
                     )
                 }
             }

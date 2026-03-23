@@ -21,5 +21,6 @@ data class UserFilmEntity(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val userId: Int,
     val tmdbId: Int,
+    val rating: Float? = null,
     val saved: Boolean = false
 )

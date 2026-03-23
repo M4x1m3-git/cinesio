@@ -1,5 +1,6 @@
 package com.example.cinesio.ui.components
 
+import android.content.Context
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
@@ -16,12 +17,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.cinesio.data.model.Movie
+import com.example.cinesio.viewmodel.UserFilmViewModel
 
 @Composable
 fun UpcomingList(
     movies: List<Movie>,
     repoGenre: Map<Int, String>? = null,
-    onItemClick: (Movie) -> Unit
+    onItemClick: (Movie) -> Unit,
+    context: Context,
+    userFilmViewModel: UserFilmViewModel
 ) {
     Column(modifier = Modifier.fillMaxWidth())
     {
@@ -43,7 +47,7 @@ fun UpcomingList(
             .padding(start = 16.dp, bottom = 16.dp)
         ) {
             movies.forEach { movie ->
-                movieCard(movie = movie, repoGenre = repoGenre, upcoming = true, onItemClick = onItemClick)
+                movieCard(movie = movie, repoGenre = repoGenre, upcoming = true, onItemClick = onItemClick, context= context, userFilmViewModel = userFilmViewModel)
                 Spacer(modifier = Modifier.width(12.dp))
             }
         }

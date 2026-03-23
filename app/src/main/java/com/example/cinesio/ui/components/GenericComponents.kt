@@ -66,6 +66,6 @@ fun formatReleaseDate(date: String): String {
 
 
 fun logout(sharedPreferences: SharedPreferences, viewModel: UserViewModel) {
-    viewModel.logout()
     sharedPreferences.edit().clear().apply()
+    viewModel.logout()
 }

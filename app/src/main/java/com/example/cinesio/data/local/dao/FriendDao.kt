@@ -12,7 +12,7 @@ interface FriendDao {
     @Query("SELECT * FROM friends")
     suspend fun getAllFriends(): List<FriendEntity>?
 
-    @Query("SELECT * FROM friends WHERE id = :id")
+    @Query("SELECT * FROM friends WHERE friendId = :id")
     suspend fun getById(id: Int): FriendEntity?
 
     @Update

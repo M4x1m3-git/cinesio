@@ -21,24 +21,24 @@ class CommentaireViewModel(
         }
     }
 
-    fun addCommentaire(commentaire: CommentaireEntity) {
+    fun addCommentaire(commentaire: CommentaireEntity, filmId: Int) {
         viewModelScope.launch {
             repository.insert(commentaire)
-            loadCommentaires(commentaire.userFilmId)
+            loadCommentairesByFilm(filmId)
         }
     }
 
-    fun updateCommentaire(commentaire: CommentaireEntity) {
+    fun updateCommentaire(commentaire: CommentaireEntity, filmId: Int) {
         viewModelScope.launch {
             repository.update(commentaire)
-            loadCommentaires(commentaire.userFilmId)
+            loadCommentairesByFilm(filmId)
         }
     }
 
-    fun deleteCommentaire(commentaire: CommentaireEntity) {
+    fun deleteCommentaire(commentaire: CommentaireEntity, filmId: Int) {
         viewModelScope.launch {
             repository.delete(commentaire)
-            loadCommentaires(commentaire.userFilmId)
+            loadCommentairesByFilm(filmId)
         }
     }
 
@@ -46,6 +46,12 @@ class CommentaireViewModel(
         viewModelScope.launch {
             repository.clear()
             _commentaires.value = emptyList()
+        }
+    }
+
+    fun loadCommentairesByFilm(tmdbId: Int) {
+        viewModelScope.launch {
+            _commentaires.value = repository.getCommentairesByFilm(tmdbId)
         }
     }
 }

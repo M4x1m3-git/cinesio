@@ -15,12 +15,11 @@ import androidx.room.Index
             onDelete = ForeignKey.CASCADE
         )
     ],
-    indices = [Index(value = ["userFilmId"])]
+    indices = [Index(value = ["userFilmId"], unique = true)]
 )
 data class CommentaireEntity(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val userFilmId: Int,
-    val rating: Float,
     val comment: String,
     val createdAt: Long
 )

@@ -1,5 +1,6 @@
 package com.example.cinesio.ui.screens
 
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -21,6 +22,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.media3.database.DatabaseProvider
 import androidx.navigation.NavController
+import androidx.wear.compose.material.ContentAlpha
 import com.example.cinesio.data.local.database.AppDatabase
 import com.example.cinesio.data.repository.UserRepository
 import com.example.cinesio.ui.theme.CinesioTheme
@@ -39,10 +41,43 @@ fun LoginScreen(navController: NavController) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var emailError by remember { mutableStateOf(false) }
+    var loginError by remember { mutableStateOf(false) }
+
+    val colors = OutlinedTextFieldDefaults.colors(
+        focusedTextColor = MaterialTheme.colorScheme.onBackground,
+        unfocusedTextColor = MaterialTheme.colorScheme.onBackground,
+        disabledTextColor = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.5f),
+        errorTextColor = MaterialTheme.colorScheme.error,
+
+        focusedContainerColor = MaterialTheme.colorScheme.surface,
+        unfocusedContainerColor = MaterialTheme.colorScheme.surface,
+        disabledContainerColor = MaterialTheme.colorScheme.surface,
+        errorContainerColor = MaterialTheme.colorScheme.surface,
+
+        cursorColor = MaterialTheme.colorScheme.primary,
+        errorCursorColor = MaterialTheme.colorScheme.error,
+
+        focusedBorderColor = MaterialTheme.colorScheme.primary,
+        unfocusedBorderColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
+        disabledBorderColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.3f),
+        errorBorderColor = MaterialTheme.colorScheme.error,
+
+        focusedLeadingIconColor = MaterialTheme.colorScheme.onSurface,
+        unfocusedLeadingIconColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
+        disabledLeadingIconColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.3f),
+        errorLeadingIconColor = MaterialTheme.colorScheme.error,
+
+        focusedPlaceholderColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
+        unfocusedPlaceholderColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
+        disabledPlaceholderColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.3f),
+        errorPlaceholderColor = MaterialTheme.colorScheme.error
+    )
 
     LaunchedEffect(currentUser) {
         if (currentUser != null) {
-            navController.navigate("profile")
+            navController.navigate("profile") {
+                popUpTo("login") { inclusive = true }
+            }
         }
     }
 
@@ -99,10 +134,12 @@ fun LoginScreen(navController: NavController) {
                 onValueChange = {
                     email = it
                     emailError = !android.util.Patterns.EMAIL_ADDRESS.matcher(it).matches()
+                    loginError = false
                 },
                 leadingIcon = { Icon(Icons.Default.MailOutline, contentDescription = "Email") },
                 placeholder = { Text("Entrez votre email") },
                 isError = emailError,
+                colors = colors,
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(56.dp),
@@ -132,10 +169,14 @@ fun LoginScreen(navController: NavController) {
             )
             OutlinedTextField(
                 value = password,
-                onValueChange = { password = it },
+                onValueChange = {
+                    password = it
+                    loginError = false
+                },
                 leadingIcon = { Icon(Icons.Default.Lock, contentDescription = "Password") },
                 placeholder = { Text("Entrez votre mot de passe") },
                 visualTransformation = PasswordVisualTransformation(),
+                colors = colors,
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(56.dp),
@@ -158,11 +199,30 @@ fun LoginScreen(navController: NavController) {
                     fontFamily = Inter
                 )
             }
+            if (loginError) {
+                Text(
+                    text = "Email ou mot de passe incorrect",
+                    color = MaterialTheme.colorScheme.error,
+                    fontSize = 12.sp,
+                    fontFamily = Inter,
+                    modifier = Modifier.align(Alignment.Start)
+                )
+            }
 
             Spacer(modifier = Modifier.height(24.dp))
 
+            val isFormValid = email.isNotEmpty() && password.isNotEmpty() && !emailError
+
             Button(
-                onClick = { userViewModel.login(email, password) },
+                onClick = {
+                    if (isFormValid) {
+                        userViewModel.login(email, password) { success ->
+                            loginError = !success
+                        }
+                    } else {
+                        Toast.makeText(context, "Champs invalides", Toast.LENGTH_SHORT).show()
+                    }
+                },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(56.dp),

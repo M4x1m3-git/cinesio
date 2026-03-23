@@ -1,3 +1,5 @@
+package com.example.cinesio.ui.components
+
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.material3.Button

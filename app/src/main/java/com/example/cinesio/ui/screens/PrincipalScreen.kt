@@ -1,5 +1,6 @@
 package com.example.cinesio.ui.screens
 
+import android.content.Context
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -14,10 +15,21 @@ import com.example.cinesio.ui.components.MovieCarousel
 import com.example.cinesio.ui.components.RedTitle
 import com.example.cinesio.ui.components.UpcomingList
 import com.example.cinesio.viewmodel.MovieViewModel
+import com.example.cinesio.viewmodel.UserFilmViewModel
+import com.example.cinesio.data.model.Movie
 
 @Composable
-fun PrincipalScreen(navController: NavController, vm: MovieViewModel) {
+fun PrincipalScreen(navController: NavController, vm: MovieViewModel, context: Context, userFilmViewModel: UserFilmViewModel) {
     val state by vm.state.collectAsState()
+
+    val sharedPreferences = context.getSharedPreferences("prefs", Context.MODE_PRIVATE)
+    val userId = sharedPreferences.getInt("userId", -1)
+
+    LaunchedEffect(userId) {
+        if (userId != -1) {
+            userFilmViewModel.loadUserFilms(userId)
+        }
+    }
 
     Column(
         modifier = Modifier.verticalScroll(rememberScrollState())
@@ -41,7 +53,9 @@ fun PrincipalScreen(navController: NavController, vm: MovieViewModel) {
                     },
                     onSeeAllClick = {
                         navController.navigate("movie")
-                    }
+                    },
+                    context = context,
+                    userFilmViewModel = userFilmViewModel
                 )
 
                 Spacer(modifier = Modifier.height(16.dp))
@@ -51,7 +65,7 @@ fun PrincipalScreen(navController: NavController, vm: MovieViewModel) {
                     repoGenre = state.genreMap,
                     onItemClick = { movie ->
                         navController.navigate("detail/${movie.id}")
-                    }
+                    }, context= context, userFilmViewModel = userFilmViewModel
                 )
             }
         }

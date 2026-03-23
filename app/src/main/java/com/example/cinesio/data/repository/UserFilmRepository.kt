@@ -15,13 +15,6 @@ class UserFilmRepository(
     }
 
     /**
-     * Récupère un film via son tmdbId
-     */
-    suspend fun getByMovieId(tmdbId: Int): UserFilmEntity? {
-        return dao.getByMovieId(tmdbId)
-    }
-
-    /**
      * Récupère tous les films d’un utilisateur
      */
     suspend fun getByUserId(userId: Int): List<UserFilmEntity> {
@@ -29,10 +22,17 @@ class UserFilmRepository(
     }
 
     /**
+     * Récupère toutes les infos films d’un film
+     */
+    suspend fun getById(id: Int): UserFilmEntity? {
+        return dao.getById(id)
+    }
+
+    /**
      * Vérifie si un film est déjà sauvegardé
      */
-    suspend fun isMovieSaved(tmdbId: Int): Boolean {
-        return dao.getByMovieId(tmdbId) != null
+    suspend fun isMovieSaved(tmdbId: Int, userId: Int): Boolean {
+        return dao.getByMovieIdAndUser(tmdbId, userId) != null
     }
 
     /**
@@ -54,5 +54,66 @@ class UserFilmRepository(
      */
     suspend fun clear() {
         dao.clear()
+    }
+
+    /**
+     * Récuperer le nombre de films enregistré
+     */
+    suspend fun getSavedMoviesCount(userId: Int): Int {
+        return dao.getSavedMoviesCount(userId)
+    }
+
+    /**
+     * Sauvegarder ou non un film pour un utilisateur
+     */
+    suspend fun toggleSaved(userId: Int, tmdbId: Int) {
+        val existing = dao.getByMovieIdAndUser(tmdbId, userId)
+
+        if (existing == null) {
+            dao.insert(
+                UserFilmEntity(
+                    userId = userId,
+                    tmdbId = tmdbId,
+                    saved = true
+                )
+            )
+        } else {
+            dao.update(
+                existing.copy(saved = !existing.saved)
+            )
+        }
+    }
+
+    /**
+     * Vérifier si un film est sauvegardé
+     */
+    suspend fun isSaved(userId: Int, tmdbId: Int): Boolean {
+        return dao.getByMovieIdAndUser(tmdbId, userId)?.saved == true
+    }
+
+    /**
+     * Créer ou récuperer un userFilm
+     */
+    suspend fun getOrCreate(userId: Int, tmdbId: Int): UserFilmEntity {
+        val existing = dao.getByMovieIdAndUser(tmdbId, userId)
+
+        return if (existing != null) {
+            existing
+        } else {
+            val newUserFilm = UserFilmEntity(
+                userId = userId,
+                tmdbId = tmdbId,
+                saved = false
+            )
+            dao.insert(newUserFilm)
+            dao.getByMovieIdAndUser(tmdbId, userId)!!
+        }
+    }
+
+    /**
+     * Modifier une notation
+     */
+    suspend fun updateRating(userFilmId: Int, rating: Float?) {
+        dao.updateRating(userFilmId, rating)
     }
 }

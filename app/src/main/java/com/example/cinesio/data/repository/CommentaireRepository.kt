@@ -48,4 +48,25 @@ class CommentaireRepository(
     suspend fun clear() {
         dao.clear()
     }
+
+    /**
+     * Récuperer les commentaires d'un utilisateur
+     * */
+    suspend fun getUserCommentaires(userId: Int): List<CommentaireEntity> {
+        return dao.getCommentairesByUser(userId)
+    }
+
+    /**
+     * Récuperer le nombre de review d'un utilisateur
+     */
+    suspend fun getReviewCount(userId: Int): Int {
+        return dao.getReviewCount(userId)
+    }
+
+    /**
+     * Récuperer les commentaires à partir d'un film
+     */
+    suspend fun getCommentairesByFilm(tmdbId: Int): List<CommentaireEntity> {
+        return dao.getCommentairesByFilm(tmdbId)
+    }
 }
