@@ -8,7 +8,7 @@ import com.example.flixyConnect.data.local.dao.UserFilmDao
 import com.example.flixyConnect.data.local.entity.UserFilmEntity
 import com.example.flixyConnect.data.model.Movie
 import com.example.flixyConnect.data.repository.UserFilmRepository
-import com.example.flixyConnect.utils.NotificationScheduler
+//import com.example.flixyConnect.utils.NotificationScheduler
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
@@ -77,29 +77,29 @@ class UserFilmViewModel(
         }
     }
 
-    fun toggleNotification(
-        context: Context,
-        userFilm: UserFilmEntity,
-        movie: Movie
-    ) {
-        viewModelScope.launch {
-
-            val newValue = !userFilm.notifyOnRelease
-
-            repository.setNotify(userFilm.id, newValue)
-
-            if (newValue) {
-                NotificationScheduler.schedule(
-                    context,
-                    movie.id,
-                    movie.title,
-                    movie.releaseDate
-                )
-            } else {
-                NotificationScheduler.cancel(context, movie.id)
-            }
-
-            loadUserFilms(userFilm.userId)
-        }
-    }
+//    fun toggleNotification(
+//        context: Context,
+//        userFilm: UserFilmEntity,
+//        movie: Movie
+//    ) {
+//        viewModelScope.launch {
+//
+//            val newValue = !userFilm.notifyOnRelease
+//
+//            repository.setNotify(userFilm.id, newValue)
+//
+//            if (newValue) {
+//                NotificationScheduler.schedule(
+//                    context,
+//                    movie.id,
+//                    movie.title,
+//                    movie.releaseDate
+//                )
+//            } else {
+//                NotificationScheduler.cancel(context, movie.id)
+//            }
+//
+//            loadUserFilms(userFilm.userId)
+//        }
+//    }
 }

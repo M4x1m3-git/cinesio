@@ -142,82 +142,85 @@ fun DetailScreen(
                     }
                 }
 
-                Spacer(modifier = Modifier.height(24.dp))
 
-                // Section note utilisateur
-                Text("Votre note", style = MaterialTheme.typography.titleMedium)
-                var userRating by remember { mutableStateOf(userFilm?.rating ?: 0f) }
-                Row {
-                    for (i in 1..5) {
-                        IconButton(onClick = {
-                            userRating = i.toFloat()
-                            userFilm?.let { uf ->
-                                userFilmViewModel.updateRating(uf.id, userRating)
-                                userFilm = uf.copy(rating = userRating)
+                if (userId != -1) {
+                    Spacer(modifier = Modifier.height(24.dp))
+
+                    // Section note utilisateur
+                    Text("Votre note", style = MaterialTheme.typography.titleMedium)
+                    var userRating by remember { mutableStateOf(userFilm?.rating ?: 0f) }
+                    Row {
+                        for (i in 1..5) {
+                            IconButton(onClick = {
+                                userRating = i.toFloat()
+                                userFilm?.let { uf ->
+                                    userFilmViewModel.updateRating(uf.id, userRating)
+                                    userFilm = uf.copy(rating = userRating)
+                                }
+                            }) {
+                                Icon(
+                                    imageVector = Icons.Default.Star,
+                                    contentDescription = "Noter le film",
+                                    tint = if (i <= userRating) Color.Yellow else Color.Gray
+                                )
                             }
-                        }) {
-                            Icon(
-                                imageVector = Icons.Default.Star,
-                                contentDescription = "Noter le film",
-                                tint = if (i <= userRating) Color.Yellow else Color.Gray
-                            )
                         }
                     }
-                }
 
-                Spacer(modifier = Modifier.height(16.dp))
-                Text("Commentaires", style = MaterialTheme.typography.headlineSmall)
-                Spacer(modifier = Modifier.height(8.dp))
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Text("Commentaires", style = MaterialTheme.typography.headlineSmall)
+                    Spacer(modifier = Modifier.height(8.dp))
 
-                // Section commentaires
-                if (commentaires.isEmpty()) {
-                    Text("Aucun commentaire pour ce film")
-                } else {
-                    commentaires.forEach { c ->
-                        CommentItem(
-                            commentaire = c,
-                            authorName = authorMap[c.userFilmId] ?: "Anonyme",
-                            isOwner = userFilm?.id == c.userFilmId,
-                            onUpdate = { updated ->
-                                commentaireVm.updateCommentaire(updated, movieId)
-                            },
-                            onDelete = { toDelete ->
-                                commentaireVm.deleteCommentaire(toDelete, movieId)
-                            }
+                    // Section commentaires
+                    if (commentaires.isEmpty()) {
+                        Text("Aucun commentaire pour ce film")
+                    } else {
+                        commentaires.forEach { c ->
+                            CommentItem(
+                                commentaire = c,
+                                authorName = authorMap[c.userFilmId] ?: "Anonyme",
+                                isOwner = userFilm?.id == c.userFilmId,
+                                onUpdate = { updated ->
+                                    commentaireVm.updateCommentaire(updated, movieId)
+                                },
+                                onDelete = { toDelete ->
+                                    commentaireVm.deleteCommentaire(toDelete, movieId)
+                                }
+                            )
+                            Spacer(modifier = Modifier.height(8.dp))
+                        }
+                    }
+
+                    // Ajouter un nouveau commentaire
+                    if (userComment == null) {
+                        Spacer(modifier = Modifier.height(16.dp))
+                        OutlinedTextField(
+                            value = newComment,
+                            onValueChange = { newComment = it },
+                            label = { Text("Ajouter un commentaire") },
+                            modifier = Modifier.fillMaxWidth()
                         )
                         Spacer(modifier = Modifier.height(8.dp))
-                    }
-                }
-
-                // Ajouter un nouveau commentaire
-                if (userComment == null) {
-                    Spacer(modifier = Modifier.height(16.dp))
-                    OutlinedTextField(
-                        value = newComment,
-                        onValueChange = { newComment = it },
-                        label = { Text("Ajouter un commentaire") },
-                        modifier = Modifier.fillMaxWidth()
-                    )
-                    Spacer(modifier = Modifier.height(8.dp))
-                    Button(
-                        onClick = {
-                            if (userId != -1 && newComment.isNotBlank()) {
-                                userFilm?.let { uf ->
-                                    commentaireVm.addCommentaire(
-                                        CommentaireEntity(
-                                            userFilmId = uf.id,
-                                            comment = newComment,
-                                            createdAt = System.currentTimeMillis()
-                                        ),
-                                        movieId
-                                    )
-                                    newComment = ""
+                        Button(
+                            onClick = {
+                                if (userId != -1 && newComment.isNotBlank()) {
+                                    userFilm?.let { uf ->
+                                        commentaireVm.addCommentaire(
+                                            CommentaireEntity(
+                                                userFilmId = uf.id,
+                                                comment = newComment,
+                                                createdAt = System.currentTimeMillis()
+                                            ),
+                                            movieId
+                                        )
+                                        newComment = ""
+                                    }
                                 }
-                            }
-                        },
-                        modifier = Modifier.align(Alignment.End)
-                    ) {
-                        Text("Poster")
+                            },
+                            modifier = Modifier.align(Alignment.End)
+                        ) {
+                            Text("Poster")
+                        }
                     }
                 }
             }

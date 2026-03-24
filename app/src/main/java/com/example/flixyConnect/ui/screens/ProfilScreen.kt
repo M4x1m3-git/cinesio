@@ -32,7 +32,7 @@ import com.example.flixyConnect.network.NetworkModule
 import com.example.flixyConnect.ui.components.ThemeSwitcher
 import com.example.flixyConnect.ui.components.logout
 import com.example.flixyConnect.ui.theme.Inter
-import com.example.flixyConnect.utils.hasNotificationPermission
+//import com.example.flixyConnect.utils.hasNotificationPermission
 import com.example.flixyConnect.viewmodel.MovieViewModel
 import com.example.flixyConnect.viewmodel.NotificationViewModel
 import com.example.flixyConnect.viewmodel.UserViewModel
@@ -211,11 +211,11 @@ fun ProfilScreen(
                                 onCheckedChange = { enabled ->
 
                                     if (enabled) {
-                                        if (hasNotificationPermission(context)) {
-                                            notifViewModel.toggleRelease(true)
-                                        } else {
+//                                        if (hasNotificationPermission(context)) {
+//                                            notifViewModel.toggleRelease(true)
+//                                        } else {
                                             permissionLauncher.launch(android.Manifest.permission.POST_NOTIFICATIONS)
-                                        }
+//                                        }
                                     } else {
                                         notifViewModel.toggleRelease(false)
                                     }

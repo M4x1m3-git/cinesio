@@ -129,6 +129,19 @@ fun movieCard(
                     iconSize = 20.dp,
                     paddingInside = 6.dp
                 )
+                if (upcoming) {
+                    BellUpcoming(
+                        releaseDate = movie.releaseDate ?: "Inconnue",
+                        modifier = Modifier
+                            .align(Alignment.TopEnd)
+                            .padding(8.dp)
+                            .zIndex(1f),
+                        backgroundColor = Color.Black.copy(alpha = 0.7f),
+                        shape = RoundedCornerShape(12.dp),
+                        iconSize = 20.dp,
+                        paddingInside = 6.dp
+                    )
+                }
             }
         }
     }
