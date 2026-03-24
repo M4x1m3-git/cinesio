@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.example.cinesio.test",
+  "applicationId": "com.example.flixyConnect.test",
   "variantName": "debugAndroidTest",
   "elements": [
     {

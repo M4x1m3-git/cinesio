@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-hr_values-hr.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-hr_values-hr.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-hr/values-hr.xml",
@@ -74,7 +74,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-v30_values-v30.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-v30_values-v30.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/eb1fcd2c470d64de7e9934550b1b876f/transformed/material3-release/res/values-v30/values-v30.xml",
@@ -89,7 +89,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-cs_values-cs.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-cs_values-cs.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/eb1fcd2c470d64de7e9934550b1b876f/transformed/material3-release/res/values-cs/values-cs.xml",
@@ -162,7 +162,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-fr-rCA_values-fr-rCA.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-fr-rCA_values-fr-rCA.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/8752cb0983126b30e73ac9d9ea332d08/transformed/foundation-release/res/values-fr-rCA/values-fr-rCA.xml",
@@ -235,7 +235,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-ka_values-ka.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-ka_values-ka.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/eb1fcd2c470d64de7e9934550b1b876f/transformed/material3-release/res/values-ka/values-ka.xml",
@@ -308,7 +308,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-pt-rBR_values-pt-rBR.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-pt-rBR_values-pt-rBR.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/8752cb0983126b30e73ac9d9ea332d08/transformed/foundation-release/res/values-pt-rBR/values-pt-rBR.xml",
@@ -381,7 +381,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-pt_values-pt.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-pt_values-pt.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/eb1fcd2c470d64de7e9934550b1b876f/transformed/material3-release/res/values-pt/values-pt.xml",
@@ -454,7 +454,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-hi_values-hi.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-hi_values-hi.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-hi/values-hi.xml",
@@ -527,7 +527,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-te_values-te.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-te_values-te.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-te/values-te.xml",
@@ -600,7 +600,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-hy_values-hy.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-hy_values-hy.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-hy/values-hy.xml",
@@ -673,7 +673,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-ja_values-ja.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-ja_values-ja.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/8752cb0983126b30e73ac9d9ea332d08/transformed/foundation-release/res/values-ja/values-ja.xml",
@@ -746,7 +746,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-fi_values-fi.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-fi_values-fi.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-fi/values-fi.xml",
@@ -819,7 +819,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-in_values-in.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-in_values-in.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/8752cb0983126b30e73ac9d9ea332d08/transformed/foundation-release/res/values-in/values-in.xml",
@@ -892,7 +892,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-ca_values-ca.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-ca_values-ca.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-ca/values-ca.xml",
@@ -965,7 +965,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-sw_values-sw.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-sw_values-sw.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-sw/values-sw.xml",
@@ -1038,7 +1038,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-nb_values-nb.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-nb_values-nb.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/8752cb0983126b30e73ac9d9ea332d08/transformed/foundation-release/res/values-nb/values-nb.xml",
@@ -1111,7 +1111,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-bs_values-bs.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-bs_values-bs.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/eb1fcd2c470d64de7e9934550b1b876f/transformed/material3-release/res/values-bs/values-bs.xml",
@@ -1184,7 +1184,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-zh-rCN_values-zh-rCN.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-zh-rCN_values-zh-rCN.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-zh-rCN/values-zh-rCN.xml",
@@ -1257,7 +1257,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-or_values-or.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-or_values-or.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/eb1fcd2c470d64de7e9934550b1b876f/transformed/material3-release/res/values-or/values-or.xml",
@@ -1330,7 +1330,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-es_values-es.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-es_values-es.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-es/values-es.xml",
@@ -1403,7 +1403,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-ru_values-ru.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-ru_values-ru.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/8752cb0983126b30e73ac9d9ea332d08/transformed/foundation-release/res/values-ru/values-ru.xml",
@@ -1476,7 +1476,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-uz_values-uz.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-uz_values-uz.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-uz/values-uz.xml",
@@ -1549,7 +1549,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-it_values-it.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-it_values-it.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-it/values-it.xml",
@@ -1622,7 +1622,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-ar_values-ar.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-ar_values-ar.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-ar/values-ar.xml",
@@ -1695,7 +1695,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-v21_values-v21.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-v21_values-v21.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-v21/values-v21.xml",
@@ -1711,7 +1711,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-bn_values-bn.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-bn_values-bn.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/8752cb0983126b30e73ac9d9ea332d08/transformed/foundation-release/res/values-bn/values-bn.xml",
@@ -1784,7 +1784,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-ky_values-ky.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-ky_values-ky.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-ky/values-ky.xml",
@@ -1857,7 +1857,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-si_values-si.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-si_values-si.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-si/values-si.xml",
@@ -1930,7 +1930,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-en-rAU_values-en-rAU.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-en-rAU_values-en-rAU.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-en-rAU/values-en-rAU.xml",
@@ -2003,7 +2003,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-lo_values-lo.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-lo_values-lo.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-lo/values-lo.xml",
@@ -2076,7 +2076,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-eu_values-eu.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-eu_values-eu.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-eu/values-eu.xml",
@@ -2149,7 +2149,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-mk_values-mk.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-mk_values-mk.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-mk/values-mk.xml",
@@ -2222,7 +2222,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-sl_values-sl.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-sl_values-sl.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-sl/values-sl.xml",
@@ -2295,7 +2295,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-my_values-my.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-my_values-my.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-my/values-my.xml",
@@ -2368,7 +2368,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-af_values-af.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-af_values-af.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/eb1fcd2c470d64de7e9934550b1b876f/transformed/material3-release/res/values-af/values-af.xml",
@@ -2441,7 +2441,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-ko_values-ko.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-ko_values-ko.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-ko/values-ko.xml",
@@ -2514,7 +2514,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-tl_values-tl.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-tl_values-tl.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-tl/values-tl.xml",
@@ -2587,7 +2587,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-gl_values-gl.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-gl_values-gl.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-gl/values-gl.xml",
@@ -2660,7 +2660,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-uk_values-uk.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-uk_values-uk.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-uk/values-uk.xml",
@@ -2733,7 +2733,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-am_values-am.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-am_values-am.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-am/values-am.xml",
@@ -2806,7 +2806,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-ne_values-ne.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-ne_values-ne.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-ne/values-ne.xml",
@@ -2879,7 +2879,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-lt_values-lt.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-lt_values-lt.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/8752cb0983126b30e73ac9d9ea332d08/transformed/foundation-release/res/values-lt/values-lt.xml",
@@ -2952,7 +2952,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-mr_values-mr.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-mr_values-mr.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-mr/values-mr.xml",
@@ -3025,7 +3025,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-pl_values-pl.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-pl_values-pl.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-pl/values-pl.xml",
@@ -3098,7 +3098,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-km_values-km.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-km_values-km.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-km/values-km.xml",
@@ -3171,7 +3171,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-zu_values-zu.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-zu_values-zu.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/8752cb0983126b30e73ac9d9ea332d08/transformed/foundation-release/res/values-zu/values-zu.xml",
@@ -3244,7 +3244,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-el_values-el.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-el_values-el.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-el/values-el.xml",
@@ -3317,7 +3317,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-vi_values-vi.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-vi_values-vi.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/eb1fcd2c470d64de7e9934550b1b876f/transformed/material3-release/res/values-vi/values-vi.xml",
@@ -3390,7 +3390,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-sv_values-sv.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-sv_values-sv.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-sv/values-sv.xml",
@@ -3463,7 +3463,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-lv_values-lv.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-lv_values-lv.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/8752cb0983126b30e73ac9d9ea332d08/transformed/foundation-release/res/values-lv/values-lv.xml",
@@ -3536,7 +3536,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-sq_values-sq.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-sq_values-sq.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/eb1fcd2c470d64de7e9934550b1b876f/transformed/material3-release/res/values-sq/values-sq.xml",
@@ -3609,7 +3609,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-bg_values-bg.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-bg_values-bg.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/8752cb0983126b30e73ac9d9ea332d08/transformed/foundation-release/res/values-bg/values-bg.xml",
@@ -3682,7 +3682,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-gu_values-gu.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-gu_values-gu.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-gu/values-gu.xml",
@@ -3755,7 +3755,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-en-rCA_values-en-rCA.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-en-rCA_values-en-rCA.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/8752cb0983126b30e73ac9d9ea332d08/transformed/foundation-release/res/values-en-rCA/values-en-rCA.xml",
@@ -3828,7 +3828,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-de_values-de.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-de_values-de.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-de/values-de.xml",
@@ -3901,7 +3901,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-kk_values-kk.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-kk_values-kk.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-kk/values-kk.xml",
@@ -3974,7 +3974,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-en-rIN_values-en-rIN.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-en-rIN_values-en-rIN.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-en-rIN/values-en-rIN.xml",
@@ -4047,7 +4047,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-pa_values-pa.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-pa_values-pa.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-pa/values-pa.xml",
@@ -4120,10 +4120,10 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values_values.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values_values.arsc.flat",
             "map": [
                 {
-                    "source": "/home/maximerocher/AndroidStudioProjects/cinesio/app/src/main/res/values/colors.xml",
+                    "source": "/home/maximerocher/AndroidStudioProjects/flixyConnect/app/src/main/res/values/colors.xml",
                     "from": {
                         "startLines": "7,2,3,4,5,6,8",
                         "startColumns": "4,4,4,4,4,4,4",
@@ -4140,7 +4140,7 @@
                     }
                 },
                 {
-                    "source": "/home/maximerocher/AndroidStudioProjects/cinesio/app/src/main/res/values/strings.xml",
+                    "source": "/home/maximerocher/AndroidStudioProjects/flixyConnect/app/src/main/res/values/strings.xml",
                     "from": {
                         "startLines": "3,6,5,7",
                         "startColumns": "4,4,4,4",
@@ -4280,7 +4280,7 @@
                     }
                 },
                 {
-                    "source": "/home/maximerocher/AndroidStudioProjects/cinesio/app/src/main/res/values/themes.xml",
+                    "source": "/home/maximerocher/AndroidStudioProjects/flixyConnect/app/src/main/res/values/themes.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "4",
@@ -4443,7 +4443,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-is_values-is.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-is_values-is.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/eb1fcd2c470d64de7e9934550b1b876f/transformed/material3-release/res/values-is/values-is.xml",
@@ -4516,7 +4516,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-az_values-az.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-az_values-az.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-az/values-az.xml",
@@ -4589,7 +4589,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-th_values-th.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-th_values-th.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/eb1fcd2c470d64de7e9934550b1b876f/transformed/material3-release/res/values-th/values-th.xml",
@@ -4662,7 +4662,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-tr_values-tr.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-tr_values-tr.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-tr/values-tr.xml",
@@ -4735,7 +4735,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-be_values-be.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-be_values-be.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-be/values-be.xml",
@@ -4808,7 +4808,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-ml_values-ml.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-ml_values-ml.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/eb1fcd2c470d64de7e9934550b1b876f/transformed/material3-release/res/values-ml/values-ml.xml",
@@ -4881,7 +4881,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-zh-rTW_values-zh-rTW.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-zh-rTW_values-zh-rTW.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-zh-rTW/values-zh-rTW.xml",
@@ -4954,7 +4954,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-sk_values-sk.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-sk_values-sk.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-sk/values-sk.xml",
@@ -5027,7 +5027,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-hu_values-hu.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-hu_values-hu.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-hu/values-hu.xml",
@@ -5100,7 +5100,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-as_values-as.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-as_values-as.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/eb1fcd2c470d64de7e9934550b1b876f/transformed/material3-release/res/values-as/values-as.xml",
@@ -5173,7 +5173,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-zh-rHK_values-zh-rHK.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-zh-rHK_values-zh-rHK.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/eb1fcd2c470d64de7e9934550b1b876f/transformed/material3-release/res/values-zh-rHK/values-zh-rHK.xml",
@@ -5246,7 +5246,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-da_values-da.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-da_values-da.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-da/values-da.xml",
@@ -5319,7 +5319,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-b+sr+Latn_values-b+sr+Latn.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-b+sr+Latn_values-b+sr+Latn.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/eb1fcd2c470d64de7e9934550b1b876f/transformed/material3-release/res/values-b+sr+Latn/values-b+sr+Latn.xml",
@@ -5392,7 +5392,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-sr_values-sr.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-sr_values-sr.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/8752cb0983126b30e73ac9d9ea332d08/transformed/foundation-release/res/values-sr/values-sr.xml",
@@ -5465,7 +5465,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-mn_values-mn.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-mn_values-mn.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-mn/values-mn.xml",
@@ -5538,7 +5538,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-ur_values-ur.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-ur_values-ur.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-ur/values-ur.xml",
@@ -5611,7 +5611,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-kn_values-kn.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-kn_values-kn.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/8752cb0983126b30e73ac9d9ea332d08/transformed/foundation-release/res/values-kn/values-kn.xml",
@@ -5684,7 +5684,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-iw_values-iw.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-iw_values-iw.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-iw/values-iw.xml",
@@ -5757,7 +5757,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-pt-rPT_values-pt-rPT.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-pt-rPT_values-pt-rPT.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-pt-rPT/values-pt-rPT.xml",
@@ -5830,7 +5830,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-ms_values-ms.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-ms_values-ms.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-ms/values-ms.xml",
@@ -5903,7 +5903,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-ro_values-ro.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-ro_values-ro.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/eb1fcd2c470d64de7e9934550b1b876f/transformed/material3-release/res/values-ro/values-ro.xml",
@@ -5976,7 +5976,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-en-rXC_values-en-rXC.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-en-rXC_values-en-rXC.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/8752cb0983126b30e73ac9d9ea332d08/transformed/foundation-release/res/values-en-rXC/values-en-rXC.xml",
@@ -6049,7 +6049,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-en-rGB_values-en-rGB.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-en-rGB_values-en-rGB.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-en-rGB/values-en-rGB.xml",
@@ -6122,7 +6122,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-ta_values-ta.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-ta_values-ta.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-ta/values-ta.xml",
@@ -6195,7 +6195,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-fr_values-fr.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-fr_values-fr.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/8752cb0983126b30e73ac9d9ea332d08/transformed/foundation-release/res/values-fr/values-fr.xml",
@@ -6268,7 +6268,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-es-rUS_values-es-rUS.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-es-rUS_values-es-rUS.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/eb1fcd2c470d64de7e9934550b1b876f/transformed/material3-release/res/values-es-rUS/values-es-rUS.xml",
@@ -6341,7 +6341,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-et_values-et.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-et_values-et.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/8752cb0983126b30e73ac9d9ea332d08/transformed/foundation-release/res/values-et/values-et.xml",
@@ -6414,7 +6414,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-fa_values-fa.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-fa_values-fa.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/6d5c3ca15a5fcee67fc434863b8b68f0/transformed/ui-release/res/values-fa/values-fa.xml",
@@ -6487,7 +6487,7 @@
             ]
         },
         {
-            "outputFile": "com.example.cinesio.app-debug-54:/values-nl_values-nl.arsc.flat",
+            "outputFile": "com.example.flixyConnect.app-debug-54:/values-nl_values-nl.arsc.flat",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-nl/values-nl.xml",

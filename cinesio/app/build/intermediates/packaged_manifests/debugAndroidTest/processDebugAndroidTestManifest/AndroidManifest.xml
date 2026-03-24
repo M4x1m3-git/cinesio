@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cinesio.test" >
+    package="com.example.flixyConnect.test" >
 
     <uses-sdk
         android:minSdkVersion="21"
@@ -10,8 +10,8 @@
         android:name="androidx.test.runner.AndroidJUnitRunner"
         android:functionalTest="false"
         android:handleProfiling="false"
-        android:label="Tests for com.example.cinesio"
-        android:targetPackage="com.example.cinesio" />
+        android:label="Tests for com.example.flixyConnect"
+        android:targetPackage="com.example.flixyConnect" />
 
     <uses-permission android:name="android.permission.REORDER_TASKS" />
 

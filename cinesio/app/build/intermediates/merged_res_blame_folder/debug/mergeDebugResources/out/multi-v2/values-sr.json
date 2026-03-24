@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.cinesio.app-mergeDebugResources-52:/values-sr/values-sr.xml",
+            "outputFile": "com.example.flixyConnect.app-mergeDebugResources-52:/values-sr/values-sr.xml",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/8752cb0983126b30e73ac9d9ea332d08/transformed/foundation-release/res/values-sr/values-sr.xml",

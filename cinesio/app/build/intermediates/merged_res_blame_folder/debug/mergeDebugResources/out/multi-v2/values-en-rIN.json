@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.cinesio.app-mergeDebugResources-52:/values-en-rIN/values-en-rIN.xml",
+            "outputFile": "com.example.flixyConnect.app-mergeDebugResources-52:/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
                     "source": "/home/maximerocher/.gradle/caches/8.13/transforms/99a4a9e252d0ca1a261291fbc970407d/transformed/core-1.13.1/res/values-en-rIN/values-en-rIN.xml",

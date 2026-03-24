@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.cinesio.app-mergeDebugResources-52:/values/values.xml",
+            "outputFile": "com.example.flixyConnect.app-mergeDebugResources-52:/values/values.xml",
             "map": [
                 {
-                    "source": "/home/maximerocher/AndroidStudioProjects/cinesio/app/src/main/res/values/colors.xml",
+                    "source": "/home/maximerocher/AndroidStudioProjects/flixyConnect/app/src/main/res/values/colors.xml",
                     "from": {
                         "startLines": "7,2,3,4,5,6,8",
                         "startColumns": "4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/maximerocher/AndroidStudioProjects/cinesio/app/src/main/res/values/strings.xml",
+                    "source": "/home/maximerocher/AndroidStudioProjects/flixyConnect/app/src/main/res/values/strings.xml",
                     "from": {
                         "startLines": "3,6,5,7",
                         "startColumns": "4,4,4,4",
@@ -161,7 +161,7 @@
                     }
                 },
                 {
-                    "source": "/home/maximerocher/AndroidStudioProjects/cinesio/app/src/main/res/values/themes.xml",
+                    "source": "/home/maximerocher/AndroidStudioProjects/flixyConnect/app/src/main/res/values/themes.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "4",

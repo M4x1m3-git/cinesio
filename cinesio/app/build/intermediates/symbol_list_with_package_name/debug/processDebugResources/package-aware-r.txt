@@ -1,4 +1,4 @@
-com.example.cinesio
+com.example.flixyConnect
 attr action
 attr alpha
 attr argType
@@ -300,7 +300,7 @@ style TextAppearance_Compat_Notification_Info
 style TextAppearance_Compat_Notification_Line2
 style TextAppearance_Compat_Notification_Time
 style TextAppearance_Compat_Notification_Title
-style Theme_Cinesio
+style Theme_FlixyConnect
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
 styleable ActivityNavigator android_name action data dataPattern targetPackage

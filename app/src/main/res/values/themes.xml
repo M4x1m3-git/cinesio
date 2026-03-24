@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.Cinesio" parent="android:Theme.Material.Light.NoActionBar" ></style>
+    <style name="Theme.FlixyConnect" parent="android:Theme.Material.Light.NoActionBar" ></style>
 
-    <style name="Theme.Cinesio.Splash" parent="Theme.SplashScreen">
+    <style name="Theme.FlixyConnect.Splash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/splash_background</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/clap_red</item>
-        <item name="postSplashScreenTheme">@style/Theme.Cinesio</item>
+        <item name="postSplashScreenTheme">@style/Theme.FlixyConnect</item>
     </style>
 </resources>

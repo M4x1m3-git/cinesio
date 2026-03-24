@@ -1,4 +1,4 @@
-com.example.cinesio.test
+com.example.flixyConnect.test
 attr alpha
 attr font
 attr fontProviderAuthority

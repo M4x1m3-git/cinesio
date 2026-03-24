@@ -4,7 +4,7 @@
     "type": "COMPATIBLE_SCREEN_MANIFEST",
     "kind": "Directory"
   },
-  "applicationId": "com.example.cinesio",
+  "applicationId": "com.example.flixyConnect",
   "variantName": "debug",
   "elements": []
 }

@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.example.cinesio",
+  "applicationId": "com.example.flixyConnect",
   "variantName": "debug",
   "elements": [
     {

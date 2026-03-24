@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.cinesio"
+    namespace = "com.example.flixyConnect"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.cinesio"
+        applicationId = "com.example.flixyConnect"
         minSdk = 25
         targetSdk = 36
         versionCode = 1
@@ -60,6 +60,7 @@ dependencies {
     implementation(libs.androidx.compose.animation.core)
     implementation(libs.androidx.media3.database)
     implementation(libs.androidx.compose.material)
+    implementation(libs.androidx.work.runtime.ktx)
 
     debugImplementation("androidx.compose.ui:ui-tooling")
     implementation("androidx.navigation:navigation-compose:2.7.7")

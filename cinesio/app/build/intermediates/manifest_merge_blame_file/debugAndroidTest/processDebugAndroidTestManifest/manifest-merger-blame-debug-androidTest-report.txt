@@ -1,26 +1,26 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.example.cinesio.test" >
+3    package="com.example.flixyConnect.test" >
 4
 5    <uses-sdk
-5-->/home/maximerocher/AndroidStudioProjects/cinesio/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:5:5-74
+5-->/home/maximerocher/AndroidStudioProjects/flixyConnect/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:5:5-74
 6        android:minSdkVersion="21"
-6-->/home/maximerocher/AndroidStudioProjects/cinesio/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:5:15-41
+6-->/home/maximerocher/AndroidStudioProjects/flixyConnect/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:5:15-41
 7        android:targetSdkVersion="36" />
-7-->/home/maximerocher/AndroidStudioProjects/cinesio/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:5:42-71
+7-->/home/maximerocher/AndroidStudioProjects/flixyConnect/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:5:42-71
 8
 9    <instrumentation
-9-->/home/maximerocher/AndroidStudioProjects/cinesio/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:11:5-15:69
+9-->/home/maximerocher/AndroidStudioProjects/flixyConnect/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:11:5-15:69
 10        android:name="androidx.test.runner.AndroidJUnitRunner"
-10-->/home/maximerocher/AndroidStudioProjects/cinesio/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:11:22-76
+10-->/home/maximerocher/AndroidStudioProjects/flixyConnect/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:11:22-76
 11        android:functionalTest="false"
-11-->/home/maximerocher/AndroidStudioProjects/cinesio/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:14:22-52
+11-->/home/maximerocher/AndroidStudioProjects/flixyConnect/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:14:22-52
 12        android:handleProfiling="false"
-12-->/home/maximerocher/AndroidStudioProjects/cinesio/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:13:22-53
-13        android:label="Tests for com.example.cinesio"
-13-->/home/maximerocher/AndroidStudioProjects/cinesio/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:15:22-67
-14        android:targetPackage="com.example.cinesio" />
-14-->/home/maximerocher/AndroidStudioProjects/cinesio/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:12:22-65
+12-->/home/maximerocher/AndroidStudioProjects/flixyConnect/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:13:22-53
+13        android:label="Tests for com.example.flixyConnect"
+13-->/home/maximerocher/AndroidStudioProjects/flixyConnect/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:15:22-67
+14        android:targetPackage="com.example.flixyConnect" />
+14-->/home/maximerocher/AndroidStudioProjects/flixyConnect/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:12:22-65
 15
 16    <uses-permission android:name="android.permission.REORDER_TASKS" />
 16-->[androidx.test:core:1.5.0] /home/maximerocher/.gradle/caches/8.13/transforms/f6c65fbf367e865bc5f29a19734470a3/transformed/core-1.5.0/AndroidManifest.xml:24:5-72
@@ -40,12 +40,12 @@
 22    </queries>
 23
 24    <application
-24-->/home/maximerocher/AndroidStudioProjects/cinesio/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:7:5-9:19
+24-->/home/maximerocher/AndroidStudioProjects/flixyConnect/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:7:5-9:19
 25        android:debuggable="true"
 26        android:extractNativeLibs="true" >
 27        <uses-library android:name="android.test.runner" />
-27-->/home/maximerocher/AndroidStudioProjects/cinesio/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:8:9-60
-27-->/home/maximerocher/AndroidStudioProjects/cinesio/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:8:23-57
+27-->/home/maximerocher/AndroidStudioProjects/flixyConnect/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:8:9-60
+27-->/home/maximerocher/AndroidStudioProjects/flixyConnect/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest11852470438341769685.xml:8:23-57
 28
 29        <activity
 29-->[androidx.test:core:1.5.0] /home/maximerocher/.gradle/caches/8.13/transforms/f6c65fbf367e865bc5f29a19734470a3/transformed/core-1.5.0/AndroidManifest.xml:27:9-34:20
