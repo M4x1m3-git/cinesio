@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "cinesio"
+rootProject.name = "flixyConnect"
 include(":app")

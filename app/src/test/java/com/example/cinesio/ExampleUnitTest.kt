@@ -1,4 +1,4 @@
-package com.example.cinesio
+package com.example.flixyConnect
 
 import org.junit.Test
 
