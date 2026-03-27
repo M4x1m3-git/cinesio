@@ -2,8 +2,10 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    id("org.jetbrains.kotlin.plugin.serialization") version "1.9.10"
-    id("kotlin-kapt")
+
+    kotlin("plugin.serialization") version "2.0.21"
+
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -52,11 +54,6 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
 
-    implementation(platform("androidx.compose:compose-bom:2024.09.00"))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.material3:material3:1.3.1")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.activity:activity-compose:1.9.0")
     implementation(libs.androidx.compose.animation.core)
     implementation(libs.androidx.media3.database)
     implementation(libs.androidx.compose.material)
@@ -97,5 +94,5 @@ dependencies {
     implementation("androidx.room:room-runtime:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
     implementation("org.mindrot:jbcrypt:0.4")
-    kapt("androidx.room:room-compiler:2.6.1")
+    ksp("androidx.room:room-compiler:2.6.1")
 }

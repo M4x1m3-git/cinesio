@@ -1,7 +1,6 @@
 package com.example.flixyConnect.viewmodel
 
 import android.content.Context
-import android.provider.SyncStateContract.Helpers.insert
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.flixyConnect.data.local.dao.UserFilmDao
@@ -19,6 +18,7 @@ class UserFilmViewModel(
 
     private val _userFilms = MutableStateFlow<List<UserFilmEntity>>(emptyList())
     val userFilms: StateFlow<List<UserFilmEntity>> = _userFilms
+
     private val _isSaved = MutableStateFlow(false)
     val isSaved: StateFlow<Boolean> = _isSaved
 
@@ -56,7 +56,8 @@ class UserFilmViewModel(
 
     fun isSaved(userId: Int, tmdbId: Int) {
         viewModelScope.launch {
-            _isSaved.value = repository.isSaved(userId, tmdbId)
+            // Sécurisation en cas de nullable retourné par la repo
+            _isSaved.value = repository.isSaved(userId, tmdbId) ?: false
         }
     }
 
@@ -92,8 +93,8 @@ class UserFilmViewModel(
                 NotificationScheduler.schedule(
                     context,
                     movie.id,
-                    movie.title,
-                    movie.releaseDate
+                    movie.title ?: "Film sans titre",
+                    movie.releaseDate ?: ""
                 )
             } else {
                 NotificationScheduler.cancel(context, movie.id)

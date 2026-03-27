@@ -23,8 +23,9 @@ import com.example.flixyConnect.data.local.entity.UserFilmEntity
         CommentaireEntity::class,
         FriendEntity::class
     ],
-    version = 5,
-    exportSchema = false)
+    version = 6,
+    exportSchema = false
+)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun movieDao(): MovieDao
@@ -33,7 +34,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun commentaireDao(): CommentaireDao
     abstract fun friendDao(): FriendDao
 
-            companion object {
+    companion object {
         @Volatile
         private var INSTANCE: AppDatabase? = null
 
@@ -43,7 +44,9 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "flixyConnect_database"
-                ).fallbackToDestructiveMigration().build()
+                )
+                    .fallbackToDestructiveMigration()
+                    .build()
                 INSTANCE = instance
                 instance
             }
