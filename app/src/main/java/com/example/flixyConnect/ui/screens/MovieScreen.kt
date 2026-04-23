@@ -14,6 +14,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
 import com.example.flixyConnect.data.model.Movie
+import com.example.flixyConnect.ui.components.ErrorScreen
 import com.example.flixyConnect.ui.components.movieCard
 import com.example.flixyConnect.viewmodel.MovieViewModel
 import com.example.flixyConnect.viewmodel.UserFilmViewModel
@@ -25,7 +26,14 @@ fun MovieScreen(vm: MovieViewModel, navController: NavController, context: Conte
     Column {
         when {
             state.loading -> CircularProgressIndicator()
-            state.error != null -> Text("Erreur : ${state.error}")
+            state.error != null -> {
+                ErrorScreen(
+                    error = state.error ?: "Erreur",
+                    onRetry = {
+                        vm.loadMovies()
+                    }
+                )
+            }
             else -> LazyColumn {
                 items(state.movies) { movie ->
                     movieCard(

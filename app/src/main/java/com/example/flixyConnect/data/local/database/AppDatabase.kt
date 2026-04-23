@@ -5,12 +5,10 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.flixyConnect.data.local.dao.CommentaireDao
-import com.example.flixyConnect.data.local.dao.FriendDao
 import com.example.flixyConnect.data.local.dao.MovieDao
 import com.example.flixyConnect.data.local.dao.UserDao
 import com.example.flixyConnect.data.local.dao.UserFilmDao
 import com.example.flixyConnect.data.local.entity.CommentaireEntity
-import com.example.flixyConnect.data.local.entity.FriendEntity
 import com.example.flixyConnect.data.local.entity.MovieEntity
 import com.example.flixyConnect.data.local.entity.UserEntity
 import com.example.flixyConnect.data.local.entity.UserFilmEntity
@@ -21,9 +19,8 @@ import com.example.flixyConnect.data.local.entity.UserFilmEntity
         UserEntity::class,
         UserFilmEntity::class,
         CommentaireEntity::class,
-        FriendEntity::class
     ],
-    version = 6,
+    version = 1,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
@@ -32,7 +29,6 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun userDao(): UserDao
     abstract fun userFilmDao(): UserFilmDao
     abstract fun commentaireDao(): CommentaireDao
-    abstract fun friendDao(): FriendDao
 
     companion object {
         @Volatile

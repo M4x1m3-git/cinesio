@@ -21,6 +21,7 @@ import com.example.flixyConnect.data.local.database.AppDatabase
 import com.example.flixyConnect.data.local.entity.CommentaireEntity
 import com.example.flixyConnect.data.local.entity.UserFilmEntity
 import com.example.flixyConnect.ui.components.CommentItem
+import com.example.flixyConnect.ui.components.ErrorScreen
 import com.example.flixyConnect.ui.components.YouTubeButton
 import com.example.flixyConnect.viewmodel.CommentaireViewModel
 import com.example.flixyConnect.viewmodel.MovieDetailViewModel
@@ -96,10 +97,14 @@ fun DetailScreen(
             contentAlignment = Alignment.Center
         ) { CircularProgressIndicator() }
 
-        state.error != null -> Text(
-            text = "Erreur : ${state.error}",
-            modifier = Modifier.padding(16.dp)
-        )
+        state.error != null -> {
+            ErrorScreen(
+                error = state.error ?: "Erreur",
+                onRetry = {
+                    vm.loadMovieDetails(movieId)
+                }
+            )
+        }
 
         state.movie != null -> {
             val movie = state.movie!!

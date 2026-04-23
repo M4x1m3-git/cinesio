@@ -25,11 +25,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.flixyConnect.data.local.database.AppDatabase
 import com.example.flixyConnect.data.repository.CommentaireRepository
-import com.example.flixyConnect.data.repository.FriendRepository
 import com.example.flixyConnect.data.repository.UserFilmRepository
 import com.example.flixyConnect.data.repository.UserRepository
 import com.example.flixyConnect.viewmodel.CommentaireViewModel
-import com.example.flixyConnect.viewmodel.FriendViewModel
 import com.example.flixyConnect.viewmodel.UserFilmViewModel
 import com.example.flixyConnect.viewmodel.UserViewModel
 
@@ -45,7 +43,6 @@ fun MainScreen(darkTheme: Boolean, onThemeUpdated: () -> Unit, context: Context)
      * */
     val movieDao = database.movieDao()
     val userDao = database.userDao()
-    val friendDao = database.friendDao()
     val commentaireDao = database.commentaireDao()
     val userFilmDao = database.userFilmDao()
 
@@ -55,9 +52,7 @@ fun MainScreen(darkTheme: Boolean, onThemeUpdated: () -> Unit, context: Context)
     val movieRepository = remember { MovieRepository(NetworkModule.movieApi, movieDao) }
     val genreRepository = remember { GenreRepository(NetworkModule.movieApi) }
     val videoRepository = remember { VideoRepository(NetworkModule.movieApi) }
-
     val userRepository = remember { UserRepository(userDao) }
-    val friendRepository = remember { FriendRepository(friendDao) }
     val commentaireRepository = remember { CommentaireRepository(commentaireDao) }
     val userFilmRepository = remember { UserFilmRepository(userFilmDao) }
 
@@ -68,7 +63,6 @@ fun MainScreen(darkTheme: Boolean, onThemeUpdated: () -> Unit, context: Context)
     val movieDetailViewModel = remember { MovieDetailViewModel(movieRepository, videoRepository) }
 
     val userViewModel: UserViewModel = viewModel(viewModelStoreOwner = LocalContext.current as androidx.activity.ComponentActivity)
-    val friendViewModel = remember { FriendViewModel(friendRepository) }
     val commentaireViewModel = remember { CommentaireViewModel(commentaireRepository) }
     val userFilmViewModel = remember { UserFilmViewModel(userFilmRepository) }
 
