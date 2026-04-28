@@ -3,11 +3,15 @@ package com.example.flixyConnect.ui.screens
 import android.content.Context
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.WifiOff
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -17,6 +21,7 @@ import com.example.flixyConnect.ui.components.UpcomingList
 import com.example.flixyConnect.viewmodel.MovieViewModel
 import com.example.flixyConnect.viewmodel.UserFilmViewModel
 import com.example.flixyConnect.data.model.Movie
+import com.example.flixyConnect.ui.components.ErrorScreen
 
 @Composable
 fun PrincipalScreen(navController: NavController, vm: MovieViewModel, context: Context, userFilmViewModel: UserFilmViewModel) {
@@ -41,8 +46,14 @@ fun PrincipalScreen(navController: NavController, vm: MovieViewModel, context: C
                 CircularProgressIndicator()
             }
             state.error != null -> {
-                Text("Erreur : ${state.error}")
+                ErrorScreen(
+                    error = state.error ?: "Erreur",
+                    onRetry = {
+                        vm.loadMovies()
+                    }
+                )
             }
+
             else -> {
 
                 MovieCarousel(
